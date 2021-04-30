@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 70px;
+    background-color: aquamarine;
+    display: flex;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.btn-cart {
+    width: 100px;
+    height: 30px;
+    background-color: darkslategrey;
+    color: white;
+}
+
+.products {
+    display: flex;
+    max-width: 1140px;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.product-item:not(:last-child) {
+    margin-right: 40px;
+}
