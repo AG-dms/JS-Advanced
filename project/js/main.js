@@ -40,6 +40,7 @@ const renderPage = list => {
 renderPage(products);
 
 // Запятые придумал удалить только так (текстовые узлы)
+
 document.querySelector('.products').childNodes.forEach(child => {
     // Можно либо все текстовые узлы либо только запятые === ','
     if (child.nodeType === 3) {
