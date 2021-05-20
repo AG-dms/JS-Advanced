@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+    <form action="#" id="form" class="noPassed">
+
+        <label>
+            Ваше имя
+            <input type="text" name="name" class="empty">
+        </label><br>
+        <label>
+            Ваш телефон
+            <input type="tel" name="phone" class="empty">
+        </label><br>
+        <label>
+            Ваш email
+            <input type="email" name="email" class="empty">
+        </label><br>
+        <button> Отправить</button>
+    </form>
+    
+
+
+
+    <script src="app.js"></script>
+    <script>
+        const form = document.getElementById('form')
+        form.addEventListener('submit', (event) =>{
+            let check = new Validator(form);
+            if(form.classList.contains('noPassed')){
+                event.preventDefault();
+            }
+        })
+    </script>
+</body>
+</html>

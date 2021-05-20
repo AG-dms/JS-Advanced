@@ -39,7 +39,7 @@ class ProductsList {
             .then(result => result.json())
             .catch(error => {
                 console.log(error);
-            })
+            });
     }
     calcSum() {
         return this.allProducts.reduce((accum, item) => accum += item.price, 0);
@@ -76,7 +76,6 @@ class ProductItem {
             </div>`
     }
 }
-
 
 //ДОМАШНЕЕ ЗАДАНИЕ № 3
 const basketBtn = document.querySelector('.btn-cart');
@@ -129,14 +128,11 @@ document.querySelector('main').addEventListener('click', (event) => {
     }
 });
 
-
-
 /**
  * Функция генерирует разметку из полученных с сервера данных
  * @param {*} item каждый объект из массива.contentes
  * @returns html разметка 
  */
-
 
 function renderBasket(item) {
     return `
